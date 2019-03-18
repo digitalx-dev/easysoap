@@ -211,8 +211,8 @@
         const $head = (head !== null) ? `<SOAP-ENV:Header>${head.map((headItem) => headItem)}</SOAP-ENV:Header>` : '';
         const $body = `<SOAP-ENV:Body>${body}</SOAP-ENV:Body>`;
 
+        /** XXX: removed `xmlns:SOAP-ENV="${envelope.soap_env}"` from second line of:**/
         const $soapEnvelope = `<SOAP-ENV:Envelope
-            xmlns:SOAP-ENV="${envelope.soap_env}"
             ${$namespacesAsString}>
             ${$head}
             ${$body}
